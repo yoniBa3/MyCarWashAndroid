@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="BallBlue">#19BBCE</color>
+    <color name="DeepTaupe">#755D69</color>
+    <color name="darkSlateGray">#2C4D5E</color>
+    <color name="YankeesBlue">#19BBCE</color>
+    <color name="peach">#FFCCA1</color>
+</resources>
