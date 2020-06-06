@@ -7,15 +7,11 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 
-import com.backendless.Backendless;
-import com.backendless.async.callback.AsyncCallback;
-import com.backendless.exceptions.BackendlessFault;
-import com.yoni.a2020_02_07mycarwashclient.fragments.DatePickerFragment;
-import com.yoni.a2020_02_07mycarwashclient.DataClasses.*;
+
 import com.yoni.a2020_02_07mycarwashclient.fragments.ListFrag;
 
 
-import java.util.List;
+
 
 public class QueueList extends AppCompatActivity {
 

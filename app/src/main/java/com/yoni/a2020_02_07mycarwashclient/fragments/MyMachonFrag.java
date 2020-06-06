@@ -200,9 +200,15 @@ public class MyMachonFrag extends Fragment implements AlertDialogAdapter.OnAppoi
                         calendar.set(Calendar.MONTH,picker.getMonth());
                         calendar.set(Calendar.DAY_OF_MONTH,picker.getDayOfMonth());
                         chosenDate = calendar.getTime();
-                        if (currentDate.after(chosenDate)){
+                        SimpleDateFormat checkFormat = new SimpleDateFormat("EEE");
+                        String day = checkFormat.format(chosenDate);
+
+                        if (currentDate.after(chosenDate) ){
                             Toast.makeText(context, "Don't be silly", Toast.LENGTH_SHORT).show();
-                        }else {
+                        }else if (day.equals("Sat")){
+                            Toast.makeText(context, "We are not open in saturday", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
                             formattedDate = df.format(chosenDate);
                             tvMachonDate.setText(formattedDate);
                             hour = "";
