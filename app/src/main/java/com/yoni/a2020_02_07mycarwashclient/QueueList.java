@@ -14,13 +14,13 @@ import com.yoni.a2020_02_07mycarwashclient.fragments.DatePickerFragment;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.*;
 import com.yoni.a2020_02_07mycarwashclient.fragments.ListFrag;
 
+
 import java.util.List;
 
 public class QueueList extends AppCompatActivity {
 
     Context context;
     FragmentManager fm;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +37,5 @@ public class QueueList extends AppCompatActivity {
         ft.replace(R.id.queueListContainer,new ListFrag())
                 .commit();
 
-    }
-
-    private void zeevExamples(){
-        Backendless.Data.of(Machon.class).find(new AsyncCallback<List<Machon>>() {
-            @Override
-            public void handleResponse(List<Machon> response) {
-
-            }
-
-            @Override
-            public void handleFault(BackendlessFault fault) {
-
-            }
-        });
     }
 }

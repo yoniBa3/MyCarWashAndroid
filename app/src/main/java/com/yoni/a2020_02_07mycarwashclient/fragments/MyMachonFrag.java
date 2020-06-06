@@ -7,8 +7,6 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.Address;
-import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -35,9 +33,7 @@ import com.yoni.a2020_02_07mycarwashclient.DataClasses.Machon;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Services;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Slots;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Wash;
-import com.yoni.a2020_02_07mycarwashclient.MainActivity;
 import com.yoni.a2020_02_07mycarwashclient.MenuActivity;
-import com.yoni.a2020_02_07mycarwashclient.QueueList;
 import com.yoni.a2020_02_07mycarwashclient.R;
 import com.yoni.a2020_02_07mycarwashclient.adapter.AlertDialogAdapter;
 import com.yoni.a2020_02_07mycarwashclient.utils.MyUtils;
@@ -49,13 +45,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyMachonFrag extends Fragment implements AlertDialogAdapter.OnAppointmentChoosen {
+public class MyMachonFrag extends Fragment implements AlertDialogAdapter.OnAppointmentChosen {
 
     private Context context;
     private TextView tvMachonName;
@@ -93,7 +88,7 @@ public class MyMachonFrag extends Fragment implements AlertDialogAdapter.OnAppoi
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Toast.makeText(context, MyUtils.myServices.size()+"", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, MyUtils.myServices.size()+"", Toast.LENGTH_SHORT).show();
         tvMachonName = view.findViewById(R.id.myMachonName);
         tvMachonAddress = view.findViewById(R.id.myMachonAddress);
         tvMachonDate = view.findViewById(R.id.myMachonDateChosen);

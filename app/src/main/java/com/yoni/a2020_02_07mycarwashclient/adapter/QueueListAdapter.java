@@ -3,9 +3,7 @@ package com.yoni.a2020_02_07mycarwashclient.adapter;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -18,7 +16,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,18 +25,15 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.backendless.Backendless;
-import com.backendless.BackendlessUser;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
 import com.backendless.persistence.DataQueryBuilder;
 import com.backendless.persistence.LoadRelationsQueryBuilder;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Machon;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Services;
-import com.yoni.a2020_02_07mycarwashclient.DataClasses.Slots;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Wash;
 import com.yoni.a2020_02_07mycarwashclient.R;
 import com.yoni.a2020_02_07mycarwashclient.fragments.MyMachonFrag;
@@ -47,16 +41,14 @@ import com.yoni.a2020_02_07mycarwashclient.utils.MyUtils;
 
 import java.io.IOException;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-public class QueueListAdapter extends RecyclerView.Adapter<QueueListAdapter.ViewHolder> implements ActivityCompat.OnRequestPermissionsResultCallback ,LocationListener , AlertDialogAdapter.OnAppointmentChoosen {
+public class QueueListAdapter extends RecyclerView.Adapter<QueueListAdapter.ViewHolder> implements ActivityCompat.OnRequestPermissionsResultCallback ,LocationListener , AlertDialogAdapter.OnAppointmentChosen {
 
 
     public static final int PER_GPS_REQUEST = 100;

@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,15 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.yoni.a2020_02_07mycarwashclient.DataClasses.Slots;
 import com.yoni.a2020_02_07mycarwashclient.R;
 
-import java.sql.Time;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Clock;
-import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 public class AlertDialogAdapter extends RecyclerView.Adapter<AlertDialogAdapter.ViewHolder> {
 
@@ -49,11 +44,11 @@ public class AlertDialogAdapter extends RecyclerView.Adapter<AlertDialogAdapter.
     Pressed pressed;
     boolean firstPress;
     String hour3 = "";
-    OnAppointmentChoosen appointmentListener;
+    OnAppointmentChosen appointmentListener;
     Date chosenDate;
 
 
-    public AlertDialogAdapter(List<Slots> timeList, List<String> hours,OnAppointmentChoosen appointmentListener,Date chosenDate) {
+    public AlertDialogAdapter(List<Slots> timeList, List<String> hours, OnAppointmentChosen appointmentListener, Date chosenDate) {
         this.timeList = timeList;
         Log.e("Error", "onBindViewHolder: " + timeList.toString());
         this.hours = hours;
@@ -177,7 +172,7 @@ public class AlertDialogAdapter extends RecyclerView.Adapter<AlertDialogAdapter.
     }
 
 
-    public interface OnAppointmentChoosen{
+    public interface OnAppointmentChosen {
         void appointmentChosen(String appointment);
     }
 }

@@ -115,7 +115,7 @@ public class CancelAppointmentAdapter extends RecyclerView.Adapter<CancelAppoint
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("ביטול תור");
-                builder.setMessage("אישור ביטול השור");
+                builder.setMessage("אישור ביטול התור");
                 builder.setPositiveButton("אישור", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

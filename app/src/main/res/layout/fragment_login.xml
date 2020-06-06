@@ -14,6 +14,7 @@
         android:layout_weight="4"
         android:gravity="center"
         android:orientation="vertical">
+
         <EditText
             android:id="@+id/etLogUserEmail"
             android:layout_width="match_parent"
@@ -22,8 +23,10 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:gravity="center_horizontal"
+            android:hint="@string/usermail"
             android:imeOptions="actionNext"
-            android:hint="UserMail" />
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/etLogUserPass"
@@ -34,8 +37,10 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="30dp"
             android:gravity="center_horizontal"
+            android:hint="@string/userpass"
             android:imeOptions="actionDone"
-            android:hint="UserPass" />
+            android:inputType="textWebPassword"
+            android:autofillHints="" />
 
     </LinearLayout>
 

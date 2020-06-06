@@ -82,12 +82,14 @@ public class LoginFrag extends Fragment {
             }
         });
 
-        getActivity().findViewById(R.id.ivGetIn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(context,QueueList.class));
-            }
-        });
+
+        //Get in throw the logo
+//        getActivity().findViewById(R.id.ivGetIn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(context,QueueList.class));
+//            }
+//        });
 
     }
 

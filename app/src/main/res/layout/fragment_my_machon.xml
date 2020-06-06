@@ -103,7 +103,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/open_icon" />
+            android:src="@drawable/open_icon"
+            android:tint="#19BBCE"/>
 
     </LinearLayout>
 
@@ -133,7 +134,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/service_icon" />
+            android:src="@drawable/service_icon"
+            android:tint="#19BBCE"/>
 
     </LinearLayout>
 
@@ -164,7 +166,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/calendar_icon" />
+            android:src="@drawable/calendar_icon"
+            android:tint="#19BBCE"/>
 
 
     </LinearLayout>
@@ -196,7 +199,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/clock_icon" />
+            android:src="@drawable/clock_icon"
+            android:tint="#19BBCE"/>
 
 
     </LinearLayout>

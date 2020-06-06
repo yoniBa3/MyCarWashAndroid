@@ -31,14 +31,14 @@ public class MenuActivity extends AppCompatActivity {
     private void setPointer() {
         this.context = this;
         tvUserName = findViewById(R.id.tvMenuUserName);
-        name = (String)MyUtils.user.getProperty("name");
+        name = (String) MyUtils.user.getProperty("name");
 
-        tvUserName.setText("שלום "+name);
+        tvUserName.setText("שלום " + name);
 
         findViewById(R.id.btnMakeApoitment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(context,QueueList.class));
+                startActivity(new Intent(context, QueueList.class));
             }
         });
 
@@ -48,8 +48,8 @@ public class MenuActivity extends AppCompatActivity {
                 Backendless.UserService.logout(new AsyncCallback<Void>() {
                     @Override
                     public void handleResponse(Void response) {
-                        Toast.makeText(context, "להתראות "+name, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(context,MainActivity.class));
+                        Toast.makeText(context, "להתראות " + name, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(context, MainActivity.class));
                         finish();
                     }
 
@@ -64,7 +64,7 @@ public class MenuActivity extends AppCompatActivity {
         findViewById(R.id.btnCancelApointment).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(context,CancelAppointmentActivity.class));
+                startActivity(new Intent(context, CancelAppointmentActivity.class));
                 finish();
             }
         });
